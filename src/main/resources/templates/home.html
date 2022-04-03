@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  
+	
+	
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/typeFastCSS.css">
+	
+	
+	<title>Think Fast Trivia</title>
+	<script src="/js/jQuery.js"></script>
+	<script defer type="text/javascript" src="/js/jqueryScript.js"></script>
+	<script defer type="text/javascript" src="/js/typingFastArea.js"></script>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/typeFastCSS.css">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+     <div id="fastTypeArea" class="dimScreen">
+
+	<div id = "ex" onclick="closeFastWindow()">X</div>
+
+ <button style="opacity:0.4" class="mods" id ="normal" onclick="changeToNormal()">Normal</button><p class="modinfo" id="normalText" style="opacity:1">*The whole sentence on the screen</p>
+            <button style = "opacity:1;" class="mods" id="eat" onclick="changeToEat()">Eat the Word</button><p class="modinfo" id="eatText" style="opacity:0">*Just one word on the screen</p>
+            <input id="theCopy" type=hidden>
+            <p id="gogo" style="display:none">GO</p>
+            <p id="whatIs" style="opacity: 0;"></p> 
+            <p id="completeText"></p> 
+            <br/>
+            <input id="copy" autofocus>
+            <button id="start" onclick="startTimer()">START</button>
+            <div id="stats"></div>
+            <input id="timer3sec">
+            <p id="infostats"></p>
+
+</div>
+
+
+
+<div id="usersArea" class="dimScreen2">
+	<!-- Connected users page -->
+
+	<div id = "ex2" onclick="closeFastWindow2()">X</div>
+	<div id = "searchCU"><p id ="textSearchConnectedUsers">Search for a player: </p> <input id="inputSearchConnectedUser" type="text" name=""/></div>
+	<table id = "tableConnectedUsers">
+		<tr>
+		    <th>Time This Session</th>
+		    <th>Name</th>
+		    <th>Trivia Points</th>
+		    <th>Best Typing Speed</th>
+		  </tr>
+		   <tr class="minfo">
+		    <td>100 minutes</td>
+		    <td>ztonaz</td>
+		    <td>239999</td>
+		    <td>140</td>
+		  </tr>
+		  <tr class="minfo">
+		    <td>2 minutes</td>
+		    <td>ggskill</td>
+		    <td>1123123</td>
+		    <td>66</td>
+		  </tr>
+	</table>
+
+	
+
+
+
+
+</div>
+
+<div id="topTriviaArea" class="dimScreen3">
+	<div id = "ex3" onclick="closeFastWindow3()">X</div>
+
+
+	<div id="whichTop"><p id = "triviaT" onclick="changeTop1()" >Top Trivia</p><p id="fastmodeT" onclick="changeTop()" class="animOn">Top Fast Mode</p></div>
+
+<div class ="searchBox" id ="searchTriviaBox">
+			<p style="color:white">Search player: </p> <input type="text" name="" id="searchTrivia">
+			
+		</div>
+
+	<div id="topTrivia">
+
+		
+
+		
+		<table id = "tableTop">
+			<tr>
+			    <th>Name</th>
+			    <th>Points</th>
+			    <th>Avg speed</th>
+			    <th>Total time connected</th>
+			    <th>Best reaction</th>
+		  </tr>
+		   <tr class="minfo">
+			    <td>ztonaz</td>
+			    <td>239999</td>
+			    <td>50</td>
+			    <td>1023 minutes</td>
+			    <td>0.7 sec</td>
+		  </tr>
+		  <tr class="minfo">
+			    <td>ggskill</td>
+			    <td>22999</td>
+			    <td>40</td>
+			    <td>111 minutes</td>
+			    <td>2.3 sec</td>
+		  </tr>
+	</table>
+	</div>
+
+
+
+	<div id="topFast">
+		<div class ="searchBox" id ="searchFastBox">
+			
+			<p style="color:white;">Search player: </p> <input type="text" name="" id="searchFast">
+		</div>
+	
+			<table id = "tableTop">
+		<tr>
+		    <th>Name</th>
+		    <th>Average Speed</th>
+		    <th>FastestTyped</th>
+		  </tr>
+		   <tr class="minfo">
+		    <td>ztonaz</td>
+		    <td>88</td>
+		    <td>145</td>
+		  </tr>
+		  <tr class="minfo">
+		    <td>ggskill</td>
+		    <td>44</td>
+		    <td>70</td>
+		  </tr>
+	</table>
+
+
+
+
+	</div>
+
+
+
+
+
+</div>
+
+<div id="loginArea" class="dimScreen4">
+	<div id = "ex4" onclick="closeFastWindow4()">X</div>
+
+<!-//--------------------------------->
+	<div id = "loginPart">
+		<div id ="userOrEmail" class="textSignIn">User or Email:</div>
+		<input type="text" name="" id="inputSignIn">
+		<div id = "passLogin" class="textSignIn">Password:</div>
+		<input type="Password" name="" id="passSignIn">
+		<button id ="signInButton">LOG IN</button>
+
+
+
+	</div>
+
+<!-//--------------------------------->
+
+	<div id = "singupPart">
+		
+		<div id="emailSignUp" class="textSignIn">E-mail:</div>
+		<input id ="inputEmailSignUp" type="Email" name="">
+
+		<div id="nicknameSignUp" class="textSignIn">Nickname:</div>
+		<input id ="nicknameInput" type="text" name="">
+
+		<div id = "passText" class="textSignIn">Password:</div>
+		<input id="passwordSignUp" type="Password" name="">
+
+		<div id="repPassText" class="textSignIn">Repeat Password:</div>
+		<input id="repeatPassSingUp" type="Password" name="">
+
+		<button id ="signUpButton">Sign UP</button>
+
+
+
+	</div>
+
+<!-//--------------------------------->
+
+
+</div>
+
+
+	<div class = "allBody">
+		
+		<div  id="outputTrivia" class="item1"></div>
+		<div id="theQ" ></div>
+		<input autofocus type="text" onfocus="this.value = this.value;" name="inputTrivia" id="inputTrivia" class="item2"/>
+		<button id="send" onclick="clickMe()">Send</button>
+		<div id="buttons">
+		<a onclick="showFast()"><div class="fastTypingButton">Fast Type Mode</div></a>
+		<a onclick="showUsers()"><div class="showUsersButton">Connected Users</div></a>
+		<a onclick="showTopTrivia()"><div class="showTopTriviaButton">Top Trivia</div></a>
+		<a onclick="showLogin()"><div class="showLoginButton">Login/Sing Up</div></a>
+		</div>
+	</div>
+
+</body>
+
+</html>

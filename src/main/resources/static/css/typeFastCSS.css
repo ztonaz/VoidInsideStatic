@@ -1,0 +1,263 @@
+
+    .theContent{
+        position: relative;
+        width: 90%;
+        height: 90vh;
+        background: yellow;
+        margin: auto;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        opacity: .9;
+
+    }
+    #copy{
+           position:absolute;
+        top:58%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:200px; /* Assign a value */
+        height:50px; /* Assign a value */
+        margin:auto;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        font-size: 1.4em;
+        text-align: center;
+        caret-color: red;
+        caret-shape: block;
+        autocomplete: off;
+    }
+    #whatIs{
+        position:absolute;
+        top:-60%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:75%; /* Assign a value */
+        height:50px; /* Assign a value */
+        margin:auto;
+        color: white;
+        text-shadow: 1px 1px #ff0000;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 2em;
+    }
+    #completeText{
+        position:absolute;
+        top:-60%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:95%; /* Assign a value */
+        height:50px; /* Assign a value */
+        margin:auto;
+        color: white;
+        text-shadow: 1px 1px #ff0000;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .mods{
+        position: absolute;
+        top: 4px;
+        width: 140px;
+        height: 30px;
+        background: white;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        border-style: none;
+    }
+    #normal{
+        left: 4px!important;
+    }
+    #eat{
+        left: 144px!important;
+    }
+    .modinfo{
+        position: absolute;
+        left: 7px;
+        top: 24px;
+        font-size: .6em;
+    }
+
+    #start{
+        position:absolute;
+        top:70%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:200px; /* Assign a value */
+        height:30px; /* Assign a value */
+        margin:auto;
+        color: white;
+        background: #00FF00;
+        border-style: none;
+        font-weight:bold;
+    }
+
+    #timer3sec{
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        width:200px; /* Assign a value */
+        height:50px; /* Assign a value */
+        margin:auto auto auto 20px;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        font-size: 1.4em;
+        text-align: center;
+        caret-color: red;
+        caret-shape: block  ;position: absolute;
+        background: none;
+        border-style:none;
+        width:20px;
+        height:20px;
+    }
+
+    #infostats{
+        position:absolute;
+        bottom:5px;
+        left:15px;
+    }
+
+    #gogo{ 
+       position:absolute;
+        top:40%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:200px; /* Assign a value */
+        height:30px; /* Assign a value */
+        margin:auto;
+        color: green;
+        border-style: none;
+        text-align:center;
+        animation: crescendo 2s;
+        
+     }
+ @keyframes crescendo {
+  0%   {transform: scale(.7);}
+  100% {transform: scale(3.5);}
+}
+
+
+@media screen and (max-width: 780px) {
+    
+#whatIs{
+        position:absolute;
+        top:-60%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:95%; /* Assign a value */
+        height:50px; /* Assign a value */
+        margin:auto;
+        color: white;
+        text-shadow: 1px 1px #ff0000;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.2em;
+    }
+    #completeText{
+        position:absolute;
+        top:-60%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:95%; /* Assign a value */
+        height:50px; /* Assign a value */
+        margin:auto;
+        color: white;
+        text-shadow: 1px 1px #ff0000;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+
+     #start{
+        position:absolute;
+        top:65%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:200px; /* Assign a value */
+        height:30px; /* Assign a value */
+        margin:auto;
+        color: white;
+        background: #00FF00;
+        border-style: none;
+        font-weight:bold;
+    }
+
+    #copy{
+        position:absolute;
+        top:45%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:200px; /* Assign a value */
+        height:50px; /* Assign a value */
+        margin:auto;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        font-size: 1.4em;
+        text-align: center;
+        caret-color: red;
+        caret-shape: block;
+        autocomplete: off;
+    }
+
+    #gogo{ 
+       position:absolute;
+        top:90%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:200px; /* Assign a value */
+        height:30px; /* Assign a value */
+        margin:auto;
+        color: green;
+        border-style: none;
+        text-align:center;
+        animation: crescendo 2s;
+        
+     }
+
+    #infostats{
+        position:absolute;
+        bottom:2px;
+        left:15px;
+    }
+
+
+     #timer3sec{
+        position:absolute;
+        top:60%;
+        bottom:0;
+        left:0;
+        right:0;
+        width:200px; /* Assign a value */
+        height:50px; /* Assign a value */
+        margin:auto auto auto 20px;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        font-size: 1.4em;
+        text-align: center;
+        caret-color: red;
+        caret-shape: block  ;position: absolute;
+        background: none;
+        border-style:none;
+        width:20px;
+        height:20px;
+    }
+
+    
+}
