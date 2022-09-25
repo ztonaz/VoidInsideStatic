@@ -10,6 +10,7 @@ public class TriviaProjectApplication {
 		SpringApplication.run(TriviaProjectApplication.class, args);
 		System.out.println("asda");
 		System.out.println("aaa");
+		System.out.println("333333333");
 	}
 
 }
