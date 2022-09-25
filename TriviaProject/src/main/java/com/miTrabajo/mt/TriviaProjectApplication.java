@@ -9,6 +9,7 @@ public class TriviaProjectApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TriviaProjectApplication.class, args);
 		System.out.println("asda");
+		System.out.println("aaa");
 	}
 
 }
