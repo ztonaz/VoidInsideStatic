@@ -8,9 +8,14 @@ public class TriviaProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TriviaProjectApplication.class, args);
-		System.out.println("asda");
-		System.out.println("aaa");
-		System.out.println("333333333");
+		
+		
 	}
+	
+	
+	public static void fase1() {
+		
+	}
+	
 
 }
