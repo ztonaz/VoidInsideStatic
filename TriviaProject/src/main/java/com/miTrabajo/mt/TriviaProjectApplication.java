@@ -3,6 +3,8 @@ package com.miTrabajo.mt;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.miTrabajo.mt.TriviaLogics.StaticGameTime;
+
 @SpringBootApplication
 public class TriviaProjectApplication {
 
@@ -10,12 +12,11 @@ public class TriviaProjectApplication {
 		SpringApplication.run(TriviaProjectApplication.class, args);
 		
 		
-	}
-	
-	
-	public static void fase1() {
+		StaticGameTime.sixSeconds();
 		
 	}
+	
+	
 	
 
 }

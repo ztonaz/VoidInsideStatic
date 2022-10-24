@@ -1,4 +1,4 @@
-package com.miTrabajo.mt;
+package com.miTrabajo.mt.TriviaLogics;
 
 import java.util.ArrayList;
 
