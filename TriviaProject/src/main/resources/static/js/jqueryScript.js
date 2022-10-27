@@ -247,17 +247,19 @@ if (breakAD==false){
 
 //Onload page
 window.onload = function() {
-	DeleteUserFromListOnDisconnect();
 	
+	//Verify when you  have the user conencted
+		//DeleteUserFromListOnDisconnect();
 	
-	
-	
-  $( "#inpTrivia" ).focus();
-  
-  document.getElementById('fastTypeArea').style.display = "none";
+	document.getElementById('fastTypeArea').style.display = "none";
   document.getElementById('usersArea').style.display = "none";
   document.getElementById('topTriviaArea').style.display = "none";
   document.getElementById('loginArea').style.display = "none";
+ 
+	
+  $( "#inpTrivia" ).focus();
+  
+  
     //message will be shown when the user join - message will be shown only to the user, not all the people connected
    // $('#outputTrivia').text("The trivia are three lower Artes Liberales, i.e. grammar, logic and rhetoric. These were the topics of basic education, foundational to the quadrivia of higher education, and hence the material of basic education and an important building block for all undergraduates. The word trivia was also used to describe a place where three roads met in Ancient Rome. While the term is now obsolescent, in ancient times, it was appropriated to mean something very new. In the 1960s, nostalgic college students and others began to informally trade questions and answers about the popular culture of their youth. The first known documented labeling of this casual parlor game as Trivia was in a Columbia Daily Spectator column published on February 5, 1965. The authors, Ed Goodgold and Dan Carlinsky, then started the first organized trivia contests, described below. Since the 1960s, the plural trivia in particular has widened to include but not essential, specifically detailed knowledge on topics of popular culture. The expression has also come to suggest information of the kind useful almost exclusively for answering quiz questions, hence the brand name Trivial Pursuit.");
     //scroll full down after a message was entered in the chat

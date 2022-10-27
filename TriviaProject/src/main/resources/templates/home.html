@@ -16,14 +16,22 @@
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="/css/typeFastCSS.css">
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script defer type="text/javascript" src="/js/app.js"></script>
+
+    <script defer type="text/javascript" src="/js/botTrivia.js"></script>
+
 
 </head>
 
 <body>
 
      <div id="fastTypeArea" class="dimScreen">
-
-	<div id = "ex" onclick="closeFastWindow()">X</div>
+ <div id = "ex" onclick="closeFastWindow()">X</div>
 
  <button style="opacity:0.4" class="mods" id ="normal" onclick="changeToNormal()">Normal</button><p class="modinfo" id="normalText" style="opacity:1">*The whole sentence on the screen</p>
             <button style = "opacity:1;" class="mods" id="eat" onclick="changeToEat()">Eat the Word</button><p class="modinfo" id="eatText" style="opacity:0">*Just one word on the screen</p>
@@ -32,12 +40,14 @@
             <p id="whatIs" style="opacity: 0;"></p> 
             <p id="completeText"></p> 
             <br/>
+           
             <input id="copy" autofocus>
             <button id="start" onclick="startTimer()">START</button>
             <div id="stats"></div>
             <input id="timer3sec">
             <p id="infostats"></p>
-
+<div id = "progre"></div>
+	<div id="myBar"></div>
 </div>
 
 
@@ -48,24 +58,16 @@
 	<div id = "ex2" onclick="closeFastWindow2()">X</div>
 	<div id = "searchCU"><p id ="textSearchConnectedUsers">Search for a player: </p> <input id="inputSearchConnectedUser" type="text" name=""/></div>
 	<table id = "tableConnectedUsers">
-		<tr>
+		
+		 <tr id = "detailsConnectedU">
 		    <th>Time This Session</th>
 		    <th>Name</th>
 		    <th>Trivia Points</th>
 		    <th>Best Typing Speed</th>
 		  </tr>
-		   <tr class="minfo">
-		    <td>100 minutes</td>
-		    <td>ztonaz</td>
-		    <td>239999</td>
-		    <td>140</td>
-		  </tr>
-		  <tr class="minfo">
-		    <td>2 minutes</td>
-		    <td>ggskill</td>
-		    <td>1123123</td>
-		    <td>66</td>
-		  </tr>
+		
+		  
+		
 	</table>
 
 	
@@ -156,7 +158,7 @@
 <div id="loginArea" class="dimScreen4">
 	<div id = "ex4" onclick="closeFastWindow4()">X</div>
 
-<!-//--------------------------------->
+
 	<div id = "loginPart">
 		<div id ="userOrEmail" class="textSignIn">User or Email:</div>
 		<input type="text" name="" id="inputSignIn">
@@ -168,7 +170,7 @@
 
 	</div>
 
-<!-//--------------------------------->
+
 
 	<div id = "singupPart">
 		
@@ -190,7 +192,7 @@
 
 	</div>
 
-<!-//--------------------------------->
+
 
 
 </div>
@@ -200,15 +202,25 @@
 		
 		<div  id="outputTrivia" class="item1"></div>
 		<div id="theQ" ></div>
+
 		<input autofocus type="text" onfocus="this.value = this.value;" name="inputTrivia" id="inputTrivia" class="item2"/>
-		<button id="send" onclick="clickMe()">Send</button>
+<p id="theYourNick">[[${#request.remoteUser}]]</p>
+		<input autofocus type="text" onfocus="this.value = this.value;" name="inpTrivia" id="inpTrivia" class="item2"/>
+
+		<button id="send" onclick="clickMe()">Send </button>
+		
 		<div id="buttons">
+		 
 		<a onclick="showFast()"><div class="fastTypingButton">Fast Type Mode</div></a>
 		<a onclick="showUsers()"><div class="showUsersButton">Connected Users</div></a>
 		<a onclick="showTopTrivia()"><div class="showTopTriviaButton">Top Trivia</div></a>
 		<a onclick="showLogin()"><div class="showLoginButton">Login/Sing Up</div></a>
 		</div>
 	</div>
+
+
+
+<span id = "nickname" style="display:none">[[${#request.remoteUser}]]</span>
 
 </body>
 

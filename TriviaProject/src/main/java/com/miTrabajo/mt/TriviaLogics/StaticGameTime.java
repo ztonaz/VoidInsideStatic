@@ -17,7 +17,8 @@ public static void sixSeconds() {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				System.out.println("Capital of Spain");	
+				//System.out.println("Capital of Spain");
+				StaticFunctions.activeQuestion();
 				
 				ActiveGame();
 				
@@ -38,7 +39,7 @@ public static void ActiveGame() {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				System.out.println("Times up. The answer was Madrid. The winners are: ");
+				System.out.println("Times up. The answer was " + StaticVariables.answers.get(StaticVariables.randomZ)  + ". Recalculating scores ");
 				
 				EndGame();
 				
@@ -59,7 +60,7 @@ public static void EndGame() {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				
+				System.out.println("The winners are Test1 and Test2");
 				Prepare();
 			}
 			
@@ -79,7 +80,7 @@ public static void Prepare() {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				
+				StaticFunctions.getRandomQandA();
 				System.out.println("Next question in 6 seconds");
 				sixSeconds();
 
