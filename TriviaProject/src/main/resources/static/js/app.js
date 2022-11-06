@@ -21,6 +21,25 @@ function connect(){
 }
 
 
+var stompClientInputFromServer = null
+function connectInputFromServer(){
+
+	var socketInputFromServer = new SockJS("/EndpointMessageInputServer")
+	stompClientInputFromServer = Stomp.over(socketInputFromServer)
+	
+	stompClientInputFromServer.connect({}, function (){
+	
+		stompClientInputFromServer.subscribe("/topic/triviaContent", function (trivia){
+		
+			showChat(JSON.parse(trivia.body).triviaName, JSON.parse(trivia.body).triviaMessage)
+		
+		})
+	
+	})
+
+}
+
+
 
 
 

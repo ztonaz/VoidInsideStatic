@@ -1,6 +1,17 @@
 package com.miTrabajo.mt.TriviaLogics;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.event.EventListener;
+import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
+import org.springframework.messaging.simp.SimpMessageSendingOperations;
+import org.springframework.web.socket.messaging.SessionDisconnectEvent;
+import org.springframework.web.util.HtmlUtils;
+
+import com.miTrabajo.mt.controllers.TriviaBotZ;
 
 public class StaticFunctions {
 	
@@ -47,11 +58,25 @@ public class StaticFunctions {
 		StaticVariables.activeGame = true;	
 	}
 
-	//add info about users - dictionary 
-	public static void usersInfoDictionary() {
-		StaticVariables.infoUsersDictionary.put("ztonaz", null);
-	}
+	//static list of info to HashMap infoUsersDictionary
+		public void listInfoUser(String nickname, String xp, String tPoints, String fPoints, String timePoints, String fastestTimeTrivia, String fastestTimeFastMode, String averageTimeTrivia) {
+			
+			StaticVariables.infoUsersDictionary.put(nickname, Arrays.asList(xp, tPoints, fPoints, timePoints, fastestTimeTrivia, fastestTimeFastMode, averageTimeTrivia));
+			
+		}
 
-	
+	//send message to chat
+		//---->
+		@Autowired
+	    public SimpMessageSendingOperations messagingTemplate;
+		
+		@EventListener
+		public void sendMessageToChat(SessionDisconnectEvent event) {
+			String sessionId = event.getUser().getName();
+			messagingTemplate.convertAndSend("/topic/showUser", new TriviaBotZ(HtmlUtils.htmlEscape(sessionId), HtmlUtils.htmlEscape("s"), Integer.valueOf(1)), Collections.singletonMap(SimpMessageHeaderAccessor.SESSION_ID_HEADER, "aaa"));
+
+			
+		}
+		//----<
 
 }

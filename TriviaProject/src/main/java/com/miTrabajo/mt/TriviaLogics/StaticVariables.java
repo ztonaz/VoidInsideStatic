@@ -1,6 +1,7 @@
 package com.miTrabajo.mt.TriviaLogics;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -53,9 +54,5 @@ public class StaticVariables {
 	
 	//Test in memory database users + xp + trivia points + fast mode points + time points + fastest time + average time + fastest fast mode 
 	public static HashMap<String, List<String>> infoUsersDictionary = new HashMap<String, List<String>>();
-	//static list of info
-	public void listInfoUser(String xp, String tPoints, String fPoints, String timePoints, String fastestTimeTrivia, String fastestTimeFastMode, String averageTimeTrivia) {
-		
-		
-	}
+	
 }

@@ -23,6 +23,9 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer{
 		registry.addEndpoint("/Endpoint3").withSockJS();
 		registry.addEndpoint("/Endpoint4").withSockJS();
 		registry.addEndpoint("/EndpointConnectedUser").withSockJS();
+		
+		registry.addEndpoint("/EndpointMessageInputServer").withSockJS();
+		
 	}
 
 }
