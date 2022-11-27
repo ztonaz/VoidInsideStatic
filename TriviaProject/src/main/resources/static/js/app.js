@@ -10,7 +10,7 @@ function connect(){
 	
 	stompClient.connect({}, function (){
 	
-		stompClient.subscribe("/topic/triviaContent", function (trivia){
+		stompClient.subscribe("/topic/receive", function (trivia){
 		
 			showChat(JSON.parse(trivia.body).triviaName, JSON.parse(trivia.body).triviaMessage)
 		
@@ -21,17 +21,20 @@ function connect(){
 }
 
 
-var stompClientInputFromServer = null
-function connectInputFromServer(){
+var stompClient2 = null
 
-	var socketInputFromServer = new SockJS("/EndpointMessageInputServer")
-	stompClientInputFromServer = Stomp.over(socketInputFromServer)
+
+
+function connect2(){
+
+	var socket2 = new SockJS("/Endpoint1")
+	stompClient2 = Stomp.over(socket2)
 	
-	stompClientInputFromServer.connect({}, function (){
+	stompClient2.connect({}, function (){
 	
-		stompClientInputFromServer.subscribe("/topic/triviaContent", function (trivia){
+		stompClient2.subscribe("/topic/send2", function (trivia){
 		
-			showChat(JSON.parse(trivia.body).triviaName, JSON.parse(trivia.body).triviaMessage)
+			showChat2(JSON.parse(trivia.body).triviaName, JSON.parse(trivia.body).triviaMessage, JSON.parse(trivia.body).triviaExtra)
 		
 		})
 	
@@ -41,6 +44,35 @@ function connectInputFromServer(){
 
 
 
+
+
+
+
+
+
+
+
+
+/*
+
+function connect2(){
+
+	var socket2 = new SockJS("/Endpoint4")
+	stompClient2 = Stomp.over(socket2)
+	
+	stompClient2.connect({}, function (){
+	
+		stompClient2.subscribe("/topic/receive2", function (trivia){
+		
+			showChat2(JSON.parse(trivia.body).triviaName,(trivia.body).triviaMessage)
+		
+		})
+	
+	})
+
+}
+
+*/
 
 
 
@@ -53,7 +85,16 @@ function showChat (trivia, aa){
 }
 
 
+function showChat2 (trivia, aa){
+
+	//$("#outputTrivia").prepend(trivia + " : " + aa + "&#13;&#10")
+	insertTextFromTrivia(trivia, aa, fuck);
+
+}
+
+
 document.addEventListener("DOMContentLoaded", ()=>{
 
 	connect()
+	connect2();
 })

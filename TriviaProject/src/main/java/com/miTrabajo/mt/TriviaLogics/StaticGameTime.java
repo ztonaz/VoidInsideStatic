@@ -1,11 +1,19 @@
 package com.miTrabajo.mt.TriviaLogics;
 
+import java.util.Collections;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
+import org.springframework.messaging.simp.SimpMessageSendingOperations;
+import org.springframework.web.util.HtmlUtils;
+
+import com.miTrabajo.mt.controllers.TriviaBotZ;
+
 public class StaticGameTime {
 	
-
+	 
 
 	
 @SuppressWarnings("deprecation")
@@ -52,6 +60,9 @@ public static void ActiveGame() {
 		
 		
 	}	
+@Autowired
+public SimpMessageSendingOperations messagingTemplate;
+
 @SuppressWarnings("deprecation")
 public static void EndGame() {
 	if (StaticVariables.activeGame==true) {
@@ -61,6 +72,7 @@ public static void EndGame() {
 			public void run() {
 				// TODO Auto-generated method stub
 				System.out.println("The winners are Test1 and Test2");
+				
 				Prepare();
 			}
 			

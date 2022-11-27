@@ -309,7 +309,7 @@ function clickMe(){
   inpT = $("#inpTrivia").val()
   nick = $("#nickname").text()
 		stompClient.send("/app/receive", {}, JSON.stringify ({"triviaName":nick, "triviaMessage":inpT}))
-		
+		stompClient.send("/app/send2", {}, JSON.stringify ({"triviaName":nick, "triviaMessage":inpT, "triviaExtra":"de acici"}))
 		
 		
 		

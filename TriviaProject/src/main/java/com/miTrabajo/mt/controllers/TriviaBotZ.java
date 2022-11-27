@@ -12,7 +12,7 @@ public class TriviaBotZ {
 	private String actualTime;
 	private String connectedUsers;
 	private int extra;
-	
+	private String triviaExtra;
 	
 	public TriviaBotZ() {
 		
@@ -28,6 +28,13 @@ public class TriviaBotZ {
 		this.triviaMessage = triviaMessage;
 		this.theTime = theTime;
 		this.endTime = endTime;
+	}
+	
+	public TriviaBotZ(String triviaName, String triviaMessage, String triviaExtra) {
+		super();
+		this.triviaName = triviaName;
+		this.triviaMessage = triviaMessage;
+		this.setTriviaExtra(triviaExtra);
 	}
 	
 	
@@ -131,6 +138,22 @@ public TriviaBotZ (String triviaName, String connectedUsers, int extra) {
 
 	public void setExtra(int extra) {
 		this.extra = extra;
+	}
+
+
+
+
+
+	public String getTriviaExtra() {
+		return triviaExtra;
+	}
+
+
+
+
+
+	public void setTriviaExtra(String triviaExtra) {
+		this.triviaExtra = triviaExtra;
 	}
 
 
