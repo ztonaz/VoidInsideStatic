@@ -11,7 +11,7 @@ import com.miTrabajo.mt.TriviaLogics.StaticVariables;
 public class VoidInsideStatic {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TriviaProjectApplication.class, args);
+		SpringApplication.run(VoidInsideStaticApplication.class, args);
 		
 		
 		//load all questions and answers
