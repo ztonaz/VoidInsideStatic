@@ -8,7 +8,7 @@ import com.miTrabajo.mt.TriviaLogics.StaticGameTime;
 import com.miTrabajo.mt.TriviaLogics.StaticVariables;
 
 @SpringBootApplication
-public class TriviaProjectApplication {
+public class VoidInsideStatic {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TriviaProjectApplication.class, args);
